@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">PizzaDelivery</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_title">Меню</string>
+    <string name="profile_title">Профиль</string>
+    <string name="basket_title">Корзина</string>
+    <string name="header_text">Ветчина и грибы</string>
+    <string name="description_title">Ветчина,шампиньоны, увеличинная порция моцареллы, томатный соус</string>
+    <string name="cost">от 345 р</string>
+    <string name="image_product">image product</string>
+    <string name="no_data_available">no data available</string>
+    
+    <string-array name="city">
+        <item>Москва</item>
+        <item>Санкт-Петербург</item>
+        <item>Новосибирск</item>
+        <item>Екатеринбург</item>
+        <item>Нижний Новгород</item>
+        <item>Казань</item>
+    </string-array>
+</resources>
