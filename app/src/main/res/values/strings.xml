@@ -10,6 +10,8 @@
     <string name="cost">от %s ₽</string>
     <string name="image_product">image product</string>
     <string name="no_data_available">no data available</string>
+    <string name="error">"Произошла неизвестная ошибка. Попробуйте позже!"</string>
+    <string name="sale_banner">sale banner</string>
 
     <string-array name="city">
         <item>Москва</item>

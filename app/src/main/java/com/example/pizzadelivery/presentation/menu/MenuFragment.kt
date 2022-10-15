@@ -13,13 +13,12 @@ import com.example.pizzadelivery.presentation.menu.tabitem.TabMenuAdapter
 import com.example.pizzadelivery.presentation.utils.BaseFragment
 import com.google.android.material.tabs.TabLayoutMediator
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class MenuFragment : BaseFragment<FragmentMenuBinding>(FragmentMenuBinding::inflate) {
 
-    private val viewModal by viewModels<MenuFragmentViewModal>()
+    private val viewModal by viewModels<MenuViewModal>()
     private var bannerMenuAdapter: MenuAdapter? = null
 
 

@@ -7,11 +7,11 @@
     android:background="@drawable/tab_background_selector"
     android:textColor="@color/tab_text_color"
     android:gravity="center"
-    android:paddingStart="24dp"
-    android:paddingEnd="24dp"
-    android:paddingTop="8dp"
-    android:paddingBottom="8dp"
-    android:textSize="15sp"
+    android:paddingStart="@dimen/margin_24dp"
+    android:paddingEnd="@dimen/margin_24dp"
+    android:paddingTop="@dimen/margin_8dp"
+    android:paddingBottom="@dimen/margin_8dp"
+    android:textSize="@dimen/text_size_15sp"
     tools:text="Tab" >
 
 </TextView>

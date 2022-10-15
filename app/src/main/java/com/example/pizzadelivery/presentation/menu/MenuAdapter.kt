@@ -5,10 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import com.bumptech.glide.Glide
 import com.example.pizzadelivery.databinding.SaleMenuItemBinding
-import com.example.pizzadelivery.domain.BannersItem
+import com.example.pizzadelivery.domain.modal.BannersModel
 import com.example.pizzadelivery.presentation.utils.BannerSaleDiffCallBack
 
-class MenuAdapter : ListAdapter<BannersItem, MenuViewHolder>(BannerSaleDiffCallBack()) {
+class MenuAdapter : ListAdapter<BannersModel, MenuViewHolder>(BannerSaleDiffCallBack()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuViewHolder {
         val binding =

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="300dp"
-    android:layout_height="120dp"
-    android:layout_marginBottom="@dimen/margin_16"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/margin_300dp"
+    android:layout_height="@dimen/margin_120dp"
     android:layout_marginStart="@dimen/margin_16"
     android:layout_marginTop="@dimen/margin_16"
-    android:elevation="4dp"
-    app:cardCornerRadius="10dp">
+    android:layout_marginBottom="@dimen/margin_16"
+    android:elevation="@dimen/margin_4dp"
+    app:cardCornerRadius="@dimen/margin_10dp">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -17,8 +18,10 @@
             android:id="@+id/sale_menu_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="centerCrop" />
+            android:contentDescription="@string/sale_banner"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/bingo_pizza" />
 
     </FrameLayout>
 
-    </androidx.cardview.widget.CardView>
+</androidx.cardview.widget.CardView>

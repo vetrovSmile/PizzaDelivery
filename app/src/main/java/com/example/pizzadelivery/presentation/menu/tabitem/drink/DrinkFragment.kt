@@ -1,27 +1,10 @@
 package com.example.pizzadelivery.presentation.menu.tabitem.drink
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import com.example.pizzadelivery.R
+import com.example.pizzadelivery.databinding.FragmentDrinkBinding
+import com.example.pizzadelivery.presentation.utils.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class DrinkFragment : Fragment() {
-
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_drink, container, false)
-    }
-    companion object {
-        fun instance() = DrinkFragment()
-    }
-
-
-}
+class DrinkFragment : BaseFragment<FragmentDrinkBinding>(
+    inflate = FragmentDrinkBinding::inflate
+)

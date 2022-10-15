@@ -36,9 +36,9 @@
 
             <Spinner
                 android:id="@+id/sp_city"
-                android:layout_width="92dp"
+                android:layout_width="@dimen/margin_90dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="@dimen/margin_16"
                 android:background="@drawable/spinner_background"
                 android:entries="@array/city"
                 android:spinnerMode="dropdown"
@@ -56,7 +56,7 @@
         android:id="@+id/nav_host_fragment_container"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/margin_0dp"
         app:defaultNavHost="true"
         app:layout_constraintBottom_toTopOf="@id/bottomNavigationMenu"
         app:layout_constraintEnd_toEndOf="parent"

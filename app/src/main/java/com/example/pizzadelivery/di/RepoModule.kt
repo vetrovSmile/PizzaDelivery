@@ -12,5 +12,7 @@ import dagger.hilt.components.SingletonComponent
 interface RepoModule {
 
     @Binds
-    fun bindRepository(pizzaDeliveryRepositoryImpl: PizzaDeliveryRepositoryImpl): PizzaDeliveryRepository
+    fun bindRepository(
+        pizzaDeliveryRepositoryImpl: PizzaDeliveryRepositoryImpl
+    ): PizzaDeliveryRepository
 }

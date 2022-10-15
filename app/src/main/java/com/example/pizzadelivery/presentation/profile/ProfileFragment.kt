@@ -1,21 +1,9 @@
 package com.example.pizzadelivery.presentation.profile
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import com.example.pizzadelivery.R
+import com.example.pizzadelivery.databinding.FragmentProfileBinding
+import com.example.pizzadelivery.presentation.utils.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
-class ProfileFragment : Fragment() {
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_profile, container, false)
-    }
-
-}
+class ProfileFragment : BaseFragment<FragmentProfileBinding>(
+    inflate = FragmentProfileBinding::inflate
+)
