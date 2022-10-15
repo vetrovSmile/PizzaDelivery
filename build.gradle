@@ -5,6 +5,7 @@ buildscript {
     ext.coroutine_version = "1.6.1"
     ext.retrofit_version = "2.9.0"
     ext.navigation_version = "2.5.2"
+    ext.glide_version = "4.13.2"
 
     dependencies {
         classpath("com.google.dagger:hilt-android-gradle-plugin:2.38.1")
