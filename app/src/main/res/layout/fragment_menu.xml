@@ -22,7 +22,7 @@
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_sale_banner"
@@ -37,37 +37,30 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-
-    <androidx.core.widget.NestedScrollView
+    <LinearLayout
         android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:overScrollMode="never"
         app:layout_anchor="@+id/nestedScrollView"
         app:layout_anchorGravity="center"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <LinearLayout
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout_menu"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="70dp"
+            android:background="@drawable/tab_menu_background"
+            app:tabIndicatorHeight="0dp"
+            app:tabMode="scrollable"
+            app:tabRippleColor="@color/transparent" />
 
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tab_layout_menu"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:tabIndicatorHeight="0dp"
-                app:tabMode="scrollable"
-                app:tabRippleColor="@color/transparent" />
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/view_pager_menu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-
-        </LinearLayout>
-
-
-    </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

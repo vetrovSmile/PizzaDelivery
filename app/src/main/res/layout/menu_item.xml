@@ -9,14 +9,12 @@
 
     <ImageView
         android:id="@+id/image_product"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="136dp"
+        android:layout_height="136dp"
         android:layout_marginStart="@dimen/margin_16"
         android:layout_marginTop="@dimen/margin_16"
         android:layout_marginBottom="@dimen/margin_16"
         android:contentDescription="@string/image_product"
-        android:minWidth="135dp"
-        android:minHeight="135dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -24,14 +22,14 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_16"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_16"
         android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent">
+        android:gravity="top"
+
+        >
 
         <TextView
             android:id="@+id/header_title"
@@ -48,6 +46,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_16"
             android:textColor="@color/gray_500"
+            android:maxLines="3"
+            android:ellipsize="end"
             android:textSize="@dimen/text_size_14"
             android:textStyle="bold"
             tools:text="@string/description_title" />

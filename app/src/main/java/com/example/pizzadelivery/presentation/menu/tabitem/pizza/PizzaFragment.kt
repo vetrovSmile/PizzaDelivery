@@ -9,40 +9,52 @@ import androidx.lifecycle.repeatOnLifecycle
 import com.example.pizzadelivery.databinding.FragmentPizzaBinding
 import com.example.pizzadelivery.presentation.utils.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class PizzaFragment : BaseFragment<FragmentPizzaBinding>(FragmentPizzaBinding::inflate) {
 
     private val viewModal by viewModels<PizzaFragmentViewModal>()
-    private var viewPizzaAdapter: PizzaMenuAdapter? = null
-
+    private val viewPizzaAdapter = PizzaMenuAdapter()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        showProgressBar()
         initRvPizzaMenu()
         observePizzaMenu()
     }
 
-    private fun observePizzaMenu(){
+    private fun observePizzaMenu() {
         viewModal.getPizzaList()
-        lifecycleScope.launch{
-            repeatOnLifecycle(Lifecycle.State.CREATED){
-                viewModal.getPizzaMenu.collect{ pizzaModelItem ->
-                    viewPizzaAdapter?.submitList(pizzaModelItem)
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.CREATED) {
+                viewModal.getPizzaMenu.collect { pizzaModelItem ->
+                    viewPizzaAdapter.submitList(pizzaModelItem)
                 }
             }
         }
+
+        viewModal.viewStatePizza.observe(viewLifecycleOwner) { viewState ->
+            when {
+                viewState.isDownload -> hideProgressBar()
+            }
+        }
     }
-    private fun initRvPizzaMenu(){
+
+    private fun initRvPizzaMenu() {
         val viewPizzaRv = binding.rvPizzaMenu
-         viewPizzaAdapter = PizzaMenuAdapter()
         viewPizzaRv.adapter = viewPizzaAdapter
+    }
+
+    private fun showProgressBar() {
+        binding.loadingBar.visibility = View.VISIBLE
+    }
+
+    private fun hideProgressBar() {
+        binding.loadingBar.visibility = View.GONE
     }
 
     companion object {
         fun instance() = PizzaFragment()
     }
-
 }

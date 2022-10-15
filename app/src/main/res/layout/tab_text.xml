@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/tab_background_selector"
+    android:textColor="@color/tab_text_color"
     android:gravity="center"
     android:paddingStart="24dp"
     android:paddingEnd="24dp"

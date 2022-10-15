@@ -14,18 +14,24 @@ class PizzaMenuAdapter : ListAdapter<PizzaModelItem, PizzaMenuViewHolder>(PizzaM
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PizzaMenuViewHolder {
         val binding =
-           MenuItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            MenuItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return PizzaMenuViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: PizzaMenuViewHolder, position: Int) {
         val getPizzaMenu = getItem(position)
-        with(holder.binding){
+        with(holder.binding) {
             headerTitle.text = getPizzaMenu.name
             descriptionMenu.text = getPizzaMenu.dsc
-            Glide.with(holder.itemView.context).load(getPizzaMenu.img).into(imageProduct)
-            buttonCostMenu.text = String.format(holder.itemView.context.getString(R.string.cost),
-                getPizzaMenu.price.toString() )
+            Glide.with(holder.itemView.context)
+                .load(getPizzaMenu.img)
+                .circleCrop()
+                .into(imageProduct)
+
+            buttonCostMenu.text = String.format(
+                holder.itemView.context.getString(R.string.cost),
+                getPizzaMenu.price.toString()
+            )
         }
     }
 }

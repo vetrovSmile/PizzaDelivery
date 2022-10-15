@@ -14,4 +14,8 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="ColorProgressBar">
+        <item name="colorAccent">@color/fuchsia</item>
+    </style>
+
 </resources>

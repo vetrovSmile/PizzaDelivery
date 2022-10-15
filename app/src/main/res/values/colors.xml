@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="fuchsia">#FD3A69</color>
+    <color name="fuchsia_200">#4BFD3A69</color>
     <color name="gray_500">#AAAAAD</color>
     <color name="gray_200">#F0F0F0</color>
     <color name="transparent">#00000000</color>

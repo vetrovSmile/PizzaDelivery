@@ -7,7 +7,7 @@
     <string name="basket_title">Корзина</string>
     <string name="header_text">Ветчина и грибы</string>
     <string name="description_title">Ветчина,шампиньоны, увеличинная порция моцареллы, томатный соус</string>
-    <string name="cost">от %s р</string>
+    <string name="cost">от %s ₽</string>
     <string name="image_product">image product</string>
     <string name="no_data_available">no data available</string>
 
