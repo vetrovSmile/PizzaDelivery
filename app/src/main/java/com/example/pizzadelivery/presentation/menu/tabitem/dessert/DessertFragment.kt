@@ -1,4 +1,4 @@
-package com.example.pizzadelivery.presentation.profile
+package com.example.pizzadelivery.presentation.menu.tabitem.dessert
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,13 +9,19 @@ import com.example.pizzadelivery.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class ProfileFragment : Fragment() {
+class DessertFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_profile, container, false)
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_dessert, container, false)
     }
+
+    companion object {
+        fun instance() = DessertFragment()
+    }
+
 
 }
