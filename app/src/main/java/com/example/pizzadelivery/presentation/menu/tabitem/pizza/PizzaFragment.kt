@@ -9,6 +9,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.example.pizzadelivery.R
 import com.example.pizzadelivery.databinding.FragmentPizzaBinding
+import com.example.pizzadelivery.presentation.menu.tabitem.pizza.pizzamenuadapter.pizzadecoration.VerticalPizzaDecoration
+import com.example.pizzadelivery.presentation.menu.tabitem.pizza.pizzamenuadapter.PizzaMenuAdapter
 import com.example.pizzadelivery.presentation.utils.BaseFragment
 import com.example.pizzadelivery.presentation.utils.visible
 import dagger.hilt.android.AndroidEntryPoint
@@ -49,7 +51,7 @@ class PizzaFragment : BaseFragment<FragmentPizzaBinding>(FragmentPizzaBinding::i
                             isError -> {
                                 hideProgressBar()
                                 Toast.makeText(
-                                    requireContext(),getString(R.string.error) ,
+                                    requireContext(), getString(R.string.error),
                                     Toast.LENGTH_SHORT
                                 ).show()
                             }
@@ -63,6 +65,8 @@ class PizzaFragment : BaseFragment<FragmentPizzaBinding>(FragmentPizzaBinding::i
     private fun initPizzaMenu() {
         val pizzasRecyclerView = binding.rvPizzaMenu
         pizzasRecyclerView.adapter = viewPizzaAdapter
+        pizzasRecyclerView.addItemDecoration(VerticalPizzaDecoration(1))
+
     }
 
     private fun showProgressBar() {

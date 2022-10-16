@@ -2,7 +2,7 @@ package com.example.pizzadelivery.data
 
 import com.example.pizzadelivery.R
 import com.example.pizzadelivery.data.database.PizzaDao
-import com.example.pizzadelivery.data.database.PizzaModalMapper
+import com.example.pizzadelivery.data.database.PizzaEntity
 import com.example.pizzadelivery.data.network.PizzaApi
 import com.example.pizzadelivery.domain.modal.BannersModel
 import com.example.pizzadelivery.domain.PizzaDeliveryRepository
@@ -16,13 +16,14 @@ import javax.inject.Inject
 class PizzaDeliveryRepositoryImpl @Inject constructor(
     private val pizzaApi: PizzaApi,
     private val pizzaDao: PizzaDao,
-    private val mapper: PizzaModalMapper
 ) : PizzaDeliveryRepository {
 
     override suspend fun requestPizzaMenu() = withContext(Dispatchers.IO) {
         val pizzaModels = pizzaApi.getPizzaMenu()
         pizzaDao.insertPizzaEntities(
-            pizzaModalEntities = mapper.mapModelsToEntities(pizzaModels)
+            pizzaModels.map { pizzaModel ->
+                PizzaEntity from pizzaModel
+            }
         )
     }
 

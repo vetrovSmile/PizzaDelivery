@@ -1,4 +1,4 @@
-package com.example.pizzadelivery.presentation.menu.tabitem.pizza
+package com.example.pizzadelivery.presentation.menu.tabitem.pizza.pizzamenuadapter
 
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide

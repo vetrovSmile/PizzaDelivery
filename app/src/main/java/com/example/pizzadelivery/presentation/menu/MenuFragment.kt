@@ -45,6 +45,7 @@ class MenuFragment : BaseFragment<FragmentMenuBinding>(FragmentMenuBinding::infl
         val bannerRv = binding.rvSaleBanner
         bannerMenuAdapter = MenuAdapter()
         bannerRv.adapter = bannerMenuAdapter
+        bannerRv.addItemDecoration(MenuItemDecorator(16,50))
 
     }
 

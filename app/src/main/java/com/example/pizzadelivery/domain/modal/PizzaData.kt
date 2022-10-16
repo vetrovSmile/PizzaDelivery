@@ -12,17 +12,6 @@ data class PizzaData(
     val rate: Int
 ) {
     companion object {
-        infix fun from(pizzaModel: PizzaModel): PizzaData {
-            return PizzaData(
-                id = pizzaModel.id,
-                country = pizzaModel.country,
-                description = pizzaModel.description,
-                image = pizzaModel.image,
-                name = pizzaModel.name,
-                price = pizzaModel.price,
-                rate = pizzaModel.rate
-            )
-        }
 
         infix fun from(pizzaEntity: PizzaEntity): PizzaData {
             return PizzaData(

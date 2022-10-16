@@ -1,4 +1,4 @@
-package com.example.pizzadelivery.presentation.menu.tabitem.pizza
+package com.example.pizzadelivery.presentation.menu.tabitem.pizza.pizzamenuadapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
